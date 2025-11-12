@@ -1,4 +1,4 @@
-package io.github.ztig3r.IF.util;
+package de.ztiger.IF.util;
 
 import com.destroystokyo.paper.profile.PlayerProfile;
 import com.destroystokyo.paper.profile.ProfileProperty;

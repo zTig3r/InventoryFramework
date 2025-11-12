@@ -1,4 +1,4 @@
-package io.github.ztig3r.IF.data;
+package de.ztiger.IF.data;
 
 import lombok.Getter;
 

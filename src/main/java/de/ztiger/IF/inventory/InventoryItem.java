@@ -1,4 +1,4 @@
-package io.github.ztig3r.IF.inventory;
+package de.ztiger.IF.inventory;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

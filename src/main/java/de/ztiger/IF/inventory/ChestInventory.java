@@ -1,6 +1,6 @@
-package io.github.ztig3r.IF.inventory;
+package de.ztiger.IF.inventory;
 
-import io.github.ztig3r.IF.IFPlugin;
+import de.ztiger.IF.IFPlugin;
 import lombok.Getter;
 import lombok.Setter;
 import net.kyori.adventure.text.Component;

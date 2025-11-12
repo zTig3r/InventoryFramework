@@ -1,7 +1,7 @@
-package io.github.ztig3r.IF.inventory;
+package de.ztiger.IF.inventory;
 
-import io.github.ztig3r.IF.data.Pattern;
-import io.github.ztig3r.IF.util.ItemBuilder;
+import de.ztiger.IF.data.Pattern;
+import de.ztiger.IF.util.ItemBuilder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -1,4 +1,4 @@
 name: Inventory-Framework
 version: '1.0'
-main: io.github.ztig3r.IF.IFPlugin
+main: de.ztiger.IF.IFPlugin
 api-version: '1.20'

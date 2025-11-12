@@ -1,6 +1,6 @@
-package io.github.ztig3r.IF;
+package de.ztiger.IF;
 
-import io.github.ztig3r.IF.inventory.InventoryListener;
+import de.ztiger.IF.inventory.InventoryListener;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
