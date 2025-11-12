@@ -8,6 +8,6 @@ on:
 
 jobs:
   call-release:
-    uses: ./.github/workflows/reusable-release.yml
+    uses: ./.github/workflows/release_jitpack.yml
     with:
       prebuild: true
