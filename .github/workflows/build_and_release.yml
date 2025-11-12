@@ -2,12 +2,11 @@ name: Release to JitPack
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
+  push:    
+    branches: [ master ]
 
 jobs:
   call-release:
-    uses: ./.github/workflows/release_jitpack.yml
+    uses: zTig3r/workflows/.github/workflows/release_jitpack.yml@master
     with:
       prebuild: true
