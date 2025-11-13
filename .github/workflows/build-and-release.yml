@@ -1,0 +1,11 @@
+name: Build Plugin
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  call-build:
+    uses: zTig3r/workflows/.github/workflows/build-and-release-plugin.yml@master
+    with:
+      artifact_name: 'InventoryFramework'
