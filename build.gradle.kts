@@ -1,8 +1,11 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     id("java")
     id("maven-publish")
     id("io.freefair.lombok") version "9.0.0"
     id ("xyz.jpenilla.run-paper") version "2.3.1"
+    id ("com.gradleup.shadow") version "9.2.0"
 }
 
 group = "de.ztiger"
@@ -28,6 +31,13 @@ java {
     withJavadocJar()
 }
 
+tasks {
+    named<ShadowJar>("shadowJar") {
+        archiveClassifier.set("")
+        minimize()
+    }
+}
+
 tasks.withType<Javadoc> {
     (options as StandardJavadocDocletOptions).addStringOption("Xdoclint:none", "-quiet")
 }
@@ -35,6 +45,7 @@ tasks.withType<Javadoc> {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT")
 }
+
 
 publishing {
     publications {
