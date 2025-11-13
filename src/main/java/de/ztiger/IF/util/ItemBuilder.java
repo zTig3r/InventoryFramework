@@ -12,10 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class ItemBuilder {
 
@@ -50,7 +47,7 @@ public class ItemBuilder {
      * @return The current {@link ItemBuilder} instance for method chaining.
      */
     public ItemBuilder setLore(Component lore) {
-        meta.lore(Arrays.asList(lore));
+        meta.lore(Collections.singletonList(lore));
         return this;
     }
 
@@ -72,7 +69,7 @@ public class ItemBuilder {
      */
     public ItemBuilder addGlow() {
         meta.setEnchantmentGlintOverride(true);
-    	return this;
+        return this;
     }
 
     /**
@@ -111,6 +108,7 @@ public class ItemBuilder {
     public ItemStack build() {
         item.setItemMeta(meta);
         item.setData(DataComponentTypes.TOOLTIP_DISPLAY, TooltipDisplay.tooltipDisplay().addHiddenComponents(DataComponentTypes.PROFILE));
+        item.unsetData(DataComponentTypes.ATTRIBUTE_MODIFIERS);
         return item;
     }
 }
