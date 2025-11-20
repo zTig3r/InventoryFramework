@@ -7,9 +7,11 @@ import io.papermc.paper.datacomponent.item.TooltipDisplay;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.persistence.PersistentDataType;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -97,6 +99,18 @@ public class ItemBuilder {
         profile.setProperty(new ProfileProperty("textures", encodedTexture));
         meta.setPlayerProfile(profile);
 
+        return this;
+    }
+
+    /**
+     * Sets a persistent data entry with a byte value.
+     *
+     * @param key The {@link NamespacedKey} for the persistent data entry.
+     * @param value The byte value to store.
+     * @return The current {@link ItemBuilder} instance for method chaining.
+     */
+    public ItemBuilder setPersistentData(NamespacedKey key, byte value) {
+        meta.getPersistentDataContainer().set(key, PersistentDataType.BYTE, value);
         return this;
     }
 
